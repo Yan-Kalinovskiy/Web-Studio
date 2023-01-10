@@ -1,0 +1,18 @@
+.logo {
+  font-family: var(--logo-fonts);
+  @include font ($f-weight:700, $f-size:24px, $l-height:calc(28 / 24), $l-spacing:null);
+  text-decoration: none;
+  color: var(--main-logo-color);
+  @media screen and (min-width: 1200px) {
+    margin-right: 92px;
+    @include font ($f-weight: 700, $f-size:26px, $l-height:calc(31 / 26), $l-spacing:null);
+  } 
+}
+
+.logo--accentBlack {
+  color: var(--firstAccent-logo-color);
+}
+
+.logo--accentWhite {
+  color: var(--secondAccent-logo-color);
+}

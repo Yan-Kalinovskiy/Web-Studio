@@ -1,0 +1,53 @@
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials--menu {
+  justify-content: left;
+  width: 100%;
+  @include font ($f-weight:500, $f-size:12px, $l-height:calc(22 / 18), $l-spacing:0.02em);
+  @media screen and (min-width: 480px) {
+    @include font ($f-weight:null, $f-size:18px, $l-height:null, $l-spacing:null);
+  } 
+}
+
+.socials__item {
+  width: 44px;
+  height: 44px;
+}
+
+.socials__item--menu:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+  }
+
+.socials__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  color: var(--icon-color);
+  @include transition ((color, background-color));
+  &:hover,
+  &:focus {
+    color: var(--second-text-color);
+    background-color: var(--brand-color);
+  }
+}
+  
+.socials__link--menu {
+  color: var(--brand-color);
+}
+
+.socials__link--accession {
+  background-color: rgba(225, 255, 255, 0.1);
+  color: var(--second-text-color);
+}
+
+.socials__icon {
+  fill: currentColor;
+}

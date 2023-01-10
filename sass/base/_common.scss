@@ -1,0 +1,56 @@
+body {
+  @include font ($f-weight: null, $f-size:14px, $l-height:null, $l-spacing:0.03em);
+  font-family: var(--fonts);
+  color: var(--main-text-color);
+  background-color: var(--main-background-color);
+
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  font-style: normal;
+  color: inherit;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.container {
+  width: 100%;
+  margin: 0px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
+.section {
+  padding: 60px 0px;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0px;
+  }
+}

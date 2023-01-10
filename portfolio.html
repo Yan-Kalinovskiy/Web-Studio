@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Веб-студія, розробка сайтів, програмного забезпечення, мобільних застосунків, комп'ютерний дизайн"
+    />
+    <title>Портфоліо</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrap container">
+        <a class="header__logo logo" href="./index.html" lang="en">Web<span class="logo--accentBlack">Studio</span></a>
+        <div class="header__menu js-menu-container  is-hidden" id="mobile-menu"> 
+          <div class="header__menu--top">
+            <button class="header__btn-close js-close-menu" type="button">
+              <svg class="header__icon" width="40" height="40" 
+              aria-label="Перемикач мобільного меню">
+                <use class="header__icon-cross" href="./images/icons/sprite.svg#icon-cross"></use>
+              </svg>
+            </button>
+            <nav class="navigation">
+              <ul class="navigation__items list">
+                <li class="navigation__item"><a class="link navigation__link" href="./index.html">Студія</a></li>
+                <li class="navigation__item"><a class="link navigation__link current" href="./portfolio.html">Портфоліо</a></li>
+                <li class="navigation__item"><a class="link navigation__link" href=#address>Контакти</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__menu--bottom">
+            <div class="contacts header__contacts list">
+              <a class="contacts__link contacts__link--tel link" href="tel:+380961111111">
+              +38 096 111 11 11
+              </a>
+              <a class="contacts__link contacts__link--mail link" href="mailto:info@devstudio.com">
+              info@devstudio.com
+              </a>
+            </div>
+            <ul class="socials socials--menu list">
+              <li class="socials__item--menu">
+                <a class="socials__link socials__link--menu link" href="">Instagram</a>
+              </li>
+              <li class="socials__item--menu">
+                <a class="socials__link socials__link--menu link" href="">Twitter</a>
+              </li>
+              <li class="socials__item--menu">
+                <a class="socials__link socials__link--menu link" href="">Facebook</a>
+              </li>
+              <li class="socials__item--menu">
+                <a class="socials__link socials__link--menu link" href="">LinkedIn</a> 
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__subwrap">
+          <nav class="navigation">
+            <ul class="navigation__items list">
+              <li class="navigation__item"><a class="link navigation__link" href="./index.html">Студія</a></li>
+              <li class="navigation__item"><a class="link navigation__link current" href="./portfolio.html">Портфоліо</a></li>
+              <li class="navigation__item"><a class="link navigation__link" href=#address>Контакти</a></li>
+            </ul>
+          </nav>
+          <div class="contacts header__contacts list">
+            <a class="contacts__link link" href="tel:+380961111111">
+              <svg class="contacts__icon" width="10" height="16">
+                <use href="./images/icons/sprite.svg#icon-smartphone"></use>
+              </svg>
+          +38 096 111 11 11
+          </a>
+          <a class="contacts__link link" href="mailto:info@devstudio.com">
+            <svg class="contacts__icon" width="16" height="12">
+              <use href="./images/icons/sprite.svg#icon-envelope"></use>
+            </svg>
+          info@devstudio.com
+          </a>
+          </div>
+        </div>
+        <button class="header__btn-open js-open-menu" type="button">
+          <svg class="header__icon" width="40" height="40" 
+          aria-label="Перемикач мобільного меню">
+            <use class="header__icon-menu" href="./images/icons/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="portfolio section">
+        <div class="portfolio__wrap container">
+          <h1 class="visually-hidden">Приклади робіт</h1>
+          <ul class="portfolio__filters filters list">
+            <li class="filters__item">
+              <button class="filters__btn" type="button">Усі</button>
+            </li>
+            <li class="filters__item">
+              <button class="filters__btn" type="button">
+                Веб-сайти
+              </button>
+            </li>
+            <li class="filters__item">
+              <button class="filters__btn" type="button">Додатки</button>
+            </li>
+            <li class="filters__item">
+              <button class="filters__btn" type="button">Дизайн</button>
+            </li>
+            <li class="filters__item">
+              <button class="filters__btn" type="button">Маркетинг</button>
+            </li>
+          </ul>
+          <ul class="works list">
+            <li class="works__item">
+              <a class="works__link link" href="">
+                <div class="works__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img_portfolio_1_1200_1x.jpg 1x, 
+                        ./images/portfolio/img_portfolio_1_1200_2x.jpg 2x
+                      "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                    >
+                    <source
+                    srcset="
+                      ./images/portfolio/img_portfolio_1_768_1x.jpg 1x, 
+                      ./images/portfolio/img_portfolio_1_768_2x.jpg 2x
+                    "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                  >
+                  <source
+                      srcset="
+                        ./images/portfolio/img_portfolio_1_480_1x.jpg 1x, 
+                        ./images/portfolio/img_portfolio_1_480_2x.jpg 2x
+                      "
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                    >
+                    <img class="works__img" src="./images/portfolio/img_portfolio_1_1200_1x.jpg" alt="Ігор Дем'яненко"/>
+                  </picture>                  
+                  <p class="works__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                </div>
+                <div class="works__description works__description--addheight">
+                  <h2 class="works__title">Технокряк</h2>
+                  <p class="works__text">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="works__item">
+              <a class="works__link link" href="">
+                <div class="works__thumb">
+                  <picture>
+                    <source
+                    srcset="
+                      ./images/portfolio/img_portfolio_2_1200_1x.jpg 1x, 
+                      ./images/portfolio/img_portfolio_2_1200_2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                    >
+                    <source
+                      srcset="
+                        ./images/portfolio/img_portfolio_2_768_1x.jpg 1x, 
+                        ./images/portfolio/img_portfolio_2_768_2x.jpg 2x
+                      "
+                    media="(min-width: 768px)"
+                    type="image/jpg"
+                    >
+                    <source
+                    srcset="
+                      ./images/portfolio/img_portfolio_2_480_1x.jpg 1x, 
+                      ./images/portfolio/img_portfolio_2_480_2x.jpg 2x
+                    "
+                    media="(min-width: 480px)"
+                    type="image/jpg"
+                    width="450"
+                    >
+                    <img class="portfolio__img" src="./images/portfolio/img_portfolio_2_480_1x.jpg" alt="Ігор Дем'яненко"/>
+                  </picture> 
+                  <p class="works__overlay">Інформація перебуває в процесі розробки.</p>
+                </div>
+                <div class="works__description">
+                  <h2 class="works__title">
+                    Постер <span lang="en">New Orlean vs Golden Star</span>
+                  </h2>
+                  <p class="works__text">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="works__item">
+              <a class="works__link link" href="">
+                <div class="works__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img_portfolio_3_1200_1x.jpg 1x, 
+                        ./images/portfolio/img_portfolio_3_1200_2x.jpg 2x
+                      "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                    >
+                    <source
+                      srcset="
+                        ./images/portfolio/img_portfolio_3_768_1x.jpg 1x, 
+                        ./images/portfolio/img_portfolio_3_768_2x.jpg 2x
+                      "
+                    media="(min-width: 768px)"
+                    type="image/jpg"
+                    >
+                    <source
+                      srcset="
+                        ./images/portfolio/img_portfolio_3_480_1x.jpg 1x, 
+                        ./images/portfolio/img_portfolio_3_480_2x.jpg 2x
+                      "
+                    media="(min-width: 480px)"
+                    type="image/jpg"
+                    >
+                    <img class="portfolio__img" src="./images/portfolio/img_portfolio_3_480_1x.jpg" alt="Ігор Дем'яненко"/>
+                  </picture> 
+                  <p class="works__overlay">Інформація перебуває в процесі розробки.</p>
+                </div>
+                <div class="works__description">
+                  <h2 class="works__title">
+                    Ресторан <span lang="en">Seafood</span>
+                  </h2>
+                  <p class="works__text">Додаток</p>
+                </div>
+              </a>
+            </li>
+            <li class="works__item">
+              <a class="works__link link" href="">
+                <div class="works__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img_portfolio_4_1200_1x.jpg 1x, 
+                        ./images/portfolio/img_portfolio_4_1200_2x.jpg 2x
+                      "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                    >
+                    <source
+                    srcset="
+                      ./images/portfolio/img_portfolio_4_768_1x.jpg 1x, 
+                      ./images/portfolio/img_portfolio_4_768_2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpg"
+                    >
+                    <source
+                      srcset="
+                        ./images/portfolio/img_portfolio_4_480_1x.jpg 1x, 
+                        ./images/portfolio/img_portfolio_4_480_2x.jpg 2x
+                      "
+                    media="(min-width: 480px)"
+                    type="image/jpg"
+                    >
+                    <img class="portfolio__img" src="./images/portfolio/img_portfolio_4_480_1x.jpg" alt="Ігор Дем'яненко"/>
+                  </picture> 
+                  <p class="works__overlay">Інформація перебуває в процесі розробки.</p>
+                </div>
+                <div class="works__description">
+                  <h2 class="works__title">
+                    Проєкт <span lang="en">Prime</span>
+                  </h2>
+                  <p class="works__text">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="works__item">
+              <a class="works__link link" href="">
+                <div class="works__thumb">
+                  <picture>
+                    <source
+                    srcset="
+                      ./images/portfolio/img_portfolio_5_1200_1x.jpg 1x, 
+                      ./images/portfolio/img_portfolio_5_1200_2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                    >
+                    <source
+                      srcset="
+                        ./images/portfolio/img_portfolio_5_768_1x.jpg 1x, 
+                        ./images/portfolio/img_portfolio_5_768_2x.jpg 2x
+                      "
+                    media="(min-width: 768px)"
+                    type="image/jpg"
+                    >
+                    <source
+                      srcset="
+                        ./images/portfolio/img_portfolio_5_480_1x.jpg 1x, 
+                        ./images/portfolio/img_portfolio_5_480_2x.jpg 2x
+                      "
+                    media="(min-width: 480px)"
+                    type="image/jpg"
+                    >
+                    <img class="portfolio__img" src="./images/portfolio/img_portfolio_5_480_1x.jpg" alt="Ігор Дем'яненко"/>
+                  </picture> 
+                  <p class="works__overlay">Інформація перебуває в процесі розробки.</p>
+                </div>
+                <div class="works__description">
+                  <h2 class="works__title">
+                    Проєкт <span lang="en">Boxes</span>
+                  </h2>
+                  <p class="works__text">Додаток</p>
+                </div>
+              </a>
+            </li>
+            <li class="works__item">
+              <a class="works__link link" href="">
+                <div class="works__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img_portfolio_6_1200_1x.jpg 1x, 
+                        ./images/portfolio/img_portfolio_6_1200_2x.jpg 2x
+                      "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                    >
+                    <source
+                      srcset="
+                        ./images/portfolio/img_portfolio_6_768_1x.jpg 1x, 
+                        ./images/portfolio/img_portfolio_6_768_2x.jpg 2x
+                      "
+                    media="(min-width: 768px)"
+                    type="image/jpg"
+                    >
+                    <source
+                    srcset="
+                      ./images/portfolio/img_portfolio_6_480_1x.jpg 1x, 
+                      ./images/portfolio/img_portfolio_6_480_2x.jpg 2x
+                    "
+                  media="(min-width: 480px)"
+                  type="image/jpg"
+                  >
+                    <img class="portfolio__img" src="./images/portfolio/img_portfolio_6_480_1x.jpg" alt="Ігор Дем'яненко"/>
+                  </picture>                   <p class="works__overlay">Інформація перебуває в процесі розробки.</p>
+                </div>
+                <div class="works__description">
+                  <h2 class="works__title">
+                    <span lang="en">Inspiration has no Borders</span>
+                  </h2>
+                  <p class="works__text">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="works__item">
+              <a class="works__link link" href="">
+                <div class="works__thumb">
+                  <picture>
+                    <source
+                    srcset="
+                      ./images/portfolio/img_portfolio_7_1200_1x.jpg 1x, 
+                      ./images/portfolio/img_portfolio_7_1200_2x.jpg 2x
+                    "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                  >
+                    <source
+                      srcset="
+                        ./images/portfolio/img_portfolio_7_768_1x.jpg 1x, 
+                        ./images/portfolio/img_portfolio_7_768_2x.jpg 2x
+                      "
+                    media="(min-width: 768px)"
+                    type="image/jpg"
+                    >
+                    <source
+                    srcset="
+                      ./images/portfolio/img_portfolio_7_480_1x.jpg 1x, 
+                      ./images/portfolio/img_portfolio_7_480_2x.jpg 2x
+                    "
+                  media="(min-width: 480px)"
+                  type="image/jpg"
+                  >
+                    <img class="portfolio__img" src="./images/portfolio/img_portfolio_7_480_1x.jpg" alt="Ігор Дем'яненко"/>
+                  </picture> 
+                  <p class="works__overlay">Інформація перебуває в процесі розробки.</p>
+                </div>
+                <div class="works__description">
+                  <h2 class="works__title">
+                    Видання <span lang="en">Limited Edition</span>
+                  </h2>
+                  <p class="works__text">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="works__item">
+              <a class="works__link link" href="">
+                <div class="works__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img_portfolio_8_1200_1x.jpg 1x, 
+                        ./images/portfolio/img_portfolio_8_1200_2x.jpg 2x
+                      "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                    >
+                    <source
+                      srcset="
+                        ./images/portfolio/img_portfolio_8_768_1x.jpg 1x, 
+                        ./images/portfolio/img_portfolio_8_768_2x.jpg 2x
+                      "
+                    media="(min-width: 768px)"
+                    type="image/jpg"
+                    >
+                    <source
+                    srcset="
+                      ./images/portfolio/img_portfolio_8_480_1x.jpg 1x, 
+                      ./images/portfolio/img_portfolio_8_480_2x.jpg 2x
+                    "
+                  media="(min-width: 480px)"
+                  type="image/jpg"
+                  >
+                    <img class="portfolio__img" src="./images/portfolio/img_portfolio_8_480_1x.jpg" alt="Ігор Дем'яненко"/>
+                  </picture> 
+                  <p class="works__overlay">Інформація перебуває в процесі розробки.</p>
+                </div>
+                <div class="works__description">
+                  <h2 class="works__title">
+                    Проект <span lang="en">LAB</span>
+                  </h2>
+                  <p class="works__text">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="works__item">
+              <a class="works__link link" href="">
+                <div class="works__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/img_portfolio_9_1200_1x.jpg 1x, 
+                        ./images/portfolio/img_portfolio_9_1200_2x.jpg 2x
+                      "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                    >
+                    <source
+                      srcset="
+                        ./images/portfolio/img_portfolio_9_768_1x.jpg 1x, 
+                        ./images/portfolio/img_portfolio_9_768_2x.jpg 2x
+                      "
+                    media="(min-width: 768px)"
+                    type="image/jpg"
+                    >
+                    <source
+                    srcset="
+                      ./images/portfolio/img_portfolio_9_480_1x.jpg 1x, 
+                      ./images/portfolio/img_portfolio_9_480_2x.jpg 2x
+                    "
+                  media="(min-width: 480px)"
+                  type="image/jpg"
+                  >
+                    <img class="portfolio__img" src="./images/portfolio/img_portfolio_9_480_1x.jpg" alt="Ігор Дем'яненко"/>
+                  </picture> 
+                  <p class="works__overlay">Інформація перебуває в процесі розробки.</p>
+                </div>
+                <div class="works__description">
+                  <h2 class="works__title">
+                    <span lang="en">Growing Business</span>
+                  </h2>
+                  <p class="works__text">Додаток</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__wrap">
+          <a class="footer__logo logo" href="./index.html" lang="en">Web<span class="logo--accentWhite">Studio</span></a>
+          <address class="address" id="address">
+            <ul class="address__items list">
+              <li class="address__item">
+                <a
+                  class="address__link link footer-address address__link--address"
+                  href="https://goo.gl/maps/hbzFHiCZqx3ALi9f6"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >м. Київ, пр-т Лесі Українки, 26</a
+                >
+              </li>
+              <li class="address__item"><a class="address__link address__link--mail link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+              <li class="address__item"><a class="address__link address__link--tel link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+            </ul>
+          </address>
+        </div>
+        <div class="accession">
+          <p class="accession__text">Приєднуйтесь</p>
+          <ul class="socials list">
+            <li class="socials__item">
+              <a class="socials__link socials__link--accession" href="">
+                <svg class="socials__icon" width="20" height="20">
+                  <use href="./images/icons/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--accession" href="">
+                <svg class="socials__icon" width="20" height="20">
+                  <use href="./images/icons/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--accession" href="">
+                <svg class="socials__icon" width="20" height="20">
+                  <use href="./images/icons/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--accession" href="">
+                <svg class="socials__icon" width="20" height="20">
+                  <use href="./images/icons/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="subscription">
+          <p class="subscription__text">Підпишіться на розсилку</p>
+          <form class="subscription__form">
+              <input class="subscription__field" type="email" name="subscription-email" placeholder="E-mail" required>
+            <button class="subscription__btn" type="submit">
+              Підписатися
+              <svg class="subscription__icon" width="24" height="24">
+                <use href="./images/icons/sprite.svg#icon-send-form"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+      <!--Модальне вікно-->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal__btn" data-modal-close>
+          <svg class="modal__icon" width="11" height="11">
+            <use href="./images/icons/sprite.svg#icon-Vector-1"></use>
+          </svg>
+        </button>
+        <div class="modal__wrap">
+          <p class="modal__text">Залиште свої дані, ми вам передзвонимо</p>
+          <form class="application">
+            <div class="application__wrap">
+              <label class="application__label" for="name">Ім'я</label>
+              <div class="application__inner">
+                <input class="application__field" type="text" name="user-name" id="name" autofocus required />
+                <svg class="application__icon" width="18" height="18">
+                  <use href="./images/icons/sprite.svg#icon-person-form"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="application__wrap">
+              <label class="application__label" for="tel">Телефон</label>
+              <div class="application__inner">
+                <input class="application__field" type="tel" name="user-tel" id="tel" required>
+                <svg class="application__icon" width="18" height="18">
+                  <use href="./images/icons/sprite.svg#icon-phone-form"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="application__wrap">
+              <label class="application__label" for="email">Пошта</label>
+              <div class="application__inner">
+                <input class="application__field" type="email" name="user-email" id="email" required>
+                <svg class="application__icon" width="18" height="18">
+                  <use href="./images/icons/sprite.svg#icon-email-form"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="application__wrap">
+              <label class="application__label" for="comment">Коментар</label>
+              <textarea class="application__field application__field--textarea" id="comment" rows="6" placeholder="Введіть текст"></textarea>
+            </div>
+            <div class="application__check agreement">
+              <input class="agreement__input visually-hidden" type="checkbox" name="user-agreement" id="agreement" value="true" required>
+              <label class="agreement__label" for="agreement" >
+                <span class="agreement__inner">
+                  <svg class="agreement__icon" width="16" height="15">
+                    <use href="./images/icons/sprite.svg#icon-check-form"></use>
+                  </svg>
+                </span> Погоджуюcь з розсилкою та приймаю <a class="agreement__link" href="" target="_blank">Умови договору</a></label>
+            </div>
+            <button class="application__btn" type="submit">Відправити</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--Скріпти-->
+    <script src="./js/mobile_menu.js"></script>
+    <script src="./js/modal.js"></script>
+  </body>
+</html>

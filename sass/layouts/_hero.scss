@@ -1,0 +1,73 @@
+.hero {
+  padding: 118px 0px;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: #C4C4C4;
+  background-image: linear-gradient(var(--hero-overlay)), url('../images/hero/img_hero_480_1x.jpg');
+  background-size: 480px 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: linear-gradient(var(--hero-overlay)), url('../images/hero/img_hero_480_2x.jpg');
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    max-height: 400px;
+    background-image: linear-gradient(var(--hero-overlay)), url('../images/hero/img_hero_768_1x.jpg');
+    background-size: 768px 400px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(var(--hero-overlay)), url('../images/hero/img_hero_768_2x.jpg');
+      }
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    max-height: 600px;
+    padding: 200px 0px;
+    background-image: linear-gradient(var(--hero-overlay)), url('../images/hero/img_hero_1200_1x.jpg');
+    background-size: 1600px 600px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(var(--hero-overlay)), url('../images/hero/img_hero_1200_2x.jpg');
+      }
+  }
+}
+
+.hero__wrap {
+  width: 100%;
+}
+
+.hero__title {
+  text-align: center;
+  text-transform: uppercase;
+  max-width: 360px;
+  margin: 0px auto 30px auto;
+  @include font ($f-weight:900, $f-size:26px, $l-height:calc(42 / 26), $l-spacing:0.06em);
+  color: var(--second-text-color);
+  @media screen and (min-width: 1200px) {
+    @include font ($f-weight:null, $f-size:44px, $l-height:calc(60 / 44), $l-spacing:null);
+    max-width: 696px;
+  }
+}
+
+.hero__btn {
+  @extend %btn;
+  min-width: 216px;
+  padding: 10px 32px;
+  @include font ($f-weight:700, $f-size:16px, $l-height:calc(30 / 16), $l-spacing:0.06em);
+  color: var(--second-text-color);
+  background-color: var(--hero-btn-background-color);
+  @include transition (box-shadow);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  } 
+}
+

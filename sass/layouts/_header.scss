@@ -1,0 +1,216 @@
+.header {
+  border-bottom: 1px solid #ECECEC;
+  height: 60px;
+  @media screen and (max-width: 767px) {
+    position: relative;
+  } 
+  @media screen and (min-width: 768px) {
+    height: 80px;
+  } 
+}
+
+.header__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  } 
+}
+
+.header__subwrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and (max-width: 767px) {
+    display: none;
+  } 
+}
+
+.header__logo {
+  margin-right: 93px;
+  padding: 16px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 26px 0;
+  } 
+}
+
+.header__btn-open {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  @media screen and (min-width: 768px) {
+    display: none;
+  } 
+}
+
+.header__btn-close {
+  display: block;
+  @extend .header__btn-open;
+  margin-left: auto;
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  padding: 10px 15px 38px 30px;
+  background-color: var(--main-background-color);
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  @media screen and (min-width: 480px) {
+    padding: 10px 15px 48px 40px;
+  } 
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.navigation {
+  @include font ($f-weight:500, $f-size:25px, $l-height:calc(47 / 40), $l-spacing:0.02em);
+  @media screen and (min-width: 480px) {
+    @include font ($f-weight:null, $f-size:40px, $l-height:null, $l-spacing:null);
+  } 
+  @media screen and (min-width: 768px) {
+    width: 283px;
+    margin-bottom: 0;
+    margin-right: 90px;
+    @include font ($f-weight:null, $f-size:14px, $l-height:calc(16 / 14), $l-spacing:null);
+  } 
+  @media screen and (min-width: 1200px) {
+    width: 288px;
+    margin-right: 312px;
+  } 
+}
+
+.navigation__items {
+  display: flex;
+  width: 100%;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    gap: 20px;
+  } 
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  } 
+}
+
+.navigation__item {
+  @media screen and (max-width: 767px) {
+    flex-basis: 100%;
+  } 
+  @media screen and (min-width: 768px) {
+    display: flex;
+    position: relative;
+  } 
+}
+
+.navigation__link {
+  color: var(--title-color);
+  @include transition (color);
+  &:hover,
+  &:focus {
+    color: var(--brand-color);
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  } 
+}
+
+.current {
+  color: var(--brand-color);
+  &::after {
+    @media screen and (min-width: 768px) {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: var(--brand-color);
+      position: absolute;
+      bottom: 0;
+    } 
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 64px;
+    gap: 32px;
+  } 
+  @media screen and (max-width: 479px) {
+    margin-bottom: 40px;
+    gap: 15px;
+  } 
+  @media screen and (min-width: 768px) {
+    width: 138px;
+    gap: 10px;
+  } 
+  @media screen and (min-width: 1200px) {
+    width: 335px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  } 
+}
+
+.header__contacts {
+  margin-left: auto;
+}
+
+.contacts__link {
+  @extend .navigation__link;
+    color: var(--main-text-color);
+  @media screen and (max-width: 767px) {
+    flex-basis: 480px;
+  } 
+  @media screen and (max-width: 1199px) {
+    @include font ($f-weight:500, $f-size:12px, $l-height:calc(14 / 12), $l-spacing:0.02em);
+  } 
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    fill: currentColor;
+    gap: 8px;
+    padding: 0%;
+  } 
+}
+
+.contacts__link--tel {
+  @include font ($f-weight:500, $f-size:20px, $l-height:calc(40 / 34), $l-spacing:0.02em);
+  color: var(--brand-color);
+  @media screen and (min-width: 480px) {
+    @include font ($f-weight:null, $f-size:34px, $l-height:null, $l-spacing:null);
+  } 
+}
+
+.contacts__link--mail {
+  @include font ($f-weight:500, $f-size:18px, $l-height:calc(40 / 34), $l-spacing:0.02em);
+  @media screen and (min-width: 480px) {
+    @include font ($f-weight:null, $f-size:34px, $l-height:null, $l-spacing:null);
+  } 
+}
+
+.contacts__icon {
+  display: inline-block;
+  @include transition (color);
+  &:hover,
+  &:focus {
+    color: var(--brand-color);
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+  } 
+}
+
+
+

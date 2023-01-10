@@ -1,0 +1,13 @@
+@mixin  transition($tr-property) {
+  transition-property: $tr-property;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin font($f-weight, $f-size, $l-height, $l-spacing) {
+  font-weight: $f-weight;
+  font-size: $f-size;
+  line-height: $l-height;
+  letter-spacing: $l-spacing;
+}
+
